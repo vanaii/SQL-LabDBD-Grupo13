@@ -65,3 +65,35 @@ create table if not exists juego_de_mesa(
 	FOREIGN KEY(id_producto) REFERENCES producto(id_producto),
 	Tipo_juego varchar(50)
 );
+
+create table if not exists producto(
+	id_producto serial PRIMARY KEY,
+	url_producto varchar(100),
+	stock int,
+	categoria varchar(50),
+	nombre_producto varchar(50),
+	venta_producto int,
+	id_carta serial,
+	id_juego serial,
+	FOREIGN KEY (id_carta) REFERENCES carta(id_carta),
+	FOREIGN KEY (id_juego) REFERENCES juego_de_mesa (id_juego)
+);
+
+create table if not exists ranking(
+	id_rank serial PRIMARY KEY,
+	posicion_rank int,
+	posicion_mundial int,
+	id_producto serial,
+	FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
+);
+
+create table if not exists valoracion(
+	id_usuario varchar(50) PRIMARY KEY,
+	fecha_v date,
+	comentario varchar(300),
+	puntuacion int,
+	correo varchar(50),
+	id_producto serial,
+	FOREIGN KEY (correo) REFERENCES usuario(correo),
+	FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
+);
