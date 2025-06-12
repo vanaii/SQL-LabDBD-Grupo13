@@ -76,7 +76,7 @@ create table if not exists producto(
 	id_carta serial,
 	id_juego serial,
 	FOREIGN KEY (id_carta) REFERENCES carta(id_carta),
-	FOREIGN KEY (id_juego) REFERENCES juego_de_mesa (id_juego)
+	FOREIGN KEY (id_juego) REFERENCES juego_de_mesa(id_juego)
 );
 
 create table if not exists ranking(
@@ -93,7 +93,7 @@ create table if not exists valoracion(
 	comentario varchar(300),
 	puntuacion int,
 	correo varchar(50),
-	id_producto serial,
 	FOREIGN KEY (correo) REFERENCES usuario(correo),
+	id_producto serial,
 	FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
 );
