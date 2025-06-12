@@ -74,8 +74,8 @@ create table if not exists producto(
 	nombre_producto varchar(50),
 	venta_producto int,
 	id_carta serial,
-	id_juego serial,
 	FOREIGN KEY (id_carta) REFERENCES carta(id_carta),
+	id_juego serial,
 	FOREIGN KEY (id_juego) REFERENCES juego_de_mesa(id_juego)
 );
 
