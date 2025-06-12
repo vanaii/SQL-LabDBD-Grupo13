@@ -24,7 +24,7 @@ create table if not exists usuario(
 );
 
 create table if not exists permiso(
-	id_permiso serial,
+	id_permiso serial PRIMARY KEY,
 	correo varchar(50) PRIMARY KEY,
 	FOREIGN KEY (correo) REFERENCES usuario(correo),
 	permiso_app varchar(50),
