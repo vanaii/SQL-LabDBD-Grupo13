@@ -97,3 +97,26 @@ create table if not exists valoracion(
 	id_producto serial,
 	FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
 );
+
+create table if not exists ranking_carta(
+	id_rank_c serial PRIMARY KEY,
+	id_lista serial PRIMARY KEY,
+	FOREIGN KEY (id_lista) REFERENCES lista_deseos(id_lista),
+	id_carta serial PRIMARY KEY,
+	FOREIGN KEY (id_carta) REFERENCES carta(id_carta),
+	posicion_rank int
+);
+
+create table if not exists usuario_x_producto(
+	correo varchar(50) PRIMARY KEY,
+	FOREIGN KEY (correo) REFERENCES usuario(correo),
+	id_producto varchar(50) PRIMARY KEY,
+	FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
+);
+
+create table if not exists lista_deseos_x_producto(
+	id_lista serial PRIMARY KEY,
+	FOREIGN KEY (id_lista) REFERENCES lista_deseos(id_lista),
+	id_producto serial PRIMARY KEY,
+	FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
+);
