@@ -32,7 +32,7 @@ create table if not exists permiso(
 );
 
 create table if not exists carro_de_compras(
-	id_carrito serial PRIMARY KEY,
+	id_carro serial PRIMARY KEY,
 	monto_total int,
 	cantidad int,
 	correo varchar(50),
@@ -43,8 +43,8 @@ create table if not exists boleta(
 	n_boleta serial PRIMARY KEY,
 	metodo_pago varchar(50),
 	fecha_c date,
-	id_carrito serial,
-	FOREIGN KEY (id_carro) REFERENCES carrito_de_compra(id_carro)
+	id_carro serial,
+	FOREIGN KEY (id_carro) REFERENCES carro_de_compra(id_carro)
 );
 
 create table if not exists carta(
@@ -54,9 +54,9 @@ create table if not exists carta(
 	rareza varchar(50),
 	año int,
 	estado varchar(50),
-	formato varchar(50)
-	id_carrito serial,
-	FOREIGN KEY (id_carro) REFERENCES carrito_de_compra(id_carro)
+	formato varchar(50),
+	id_carro serial,
+	FOREIGN KEY (id_carro) REFERENCES carro_de_compra(id_carro)
 );
 
 create table if not exists juego_de_mesa(
