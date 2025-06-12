@@ -30,3 +30,38 @@ create table if not exists permiso(
 	permiso_app varchar(50),
 	permiso_tienda varchar(50)
 );
+
+create table if not exists carrito_de_compras(
+	id_carrito serial PRIMARY KEY,
+	monto_total int,
+	cantidad int,
+	correo varchar(50),
+	FOREIGN KEY (correo) REFERENCES usuario(correo)
+);
+
+create table if not exists boleta(
+	n_boleta serial PRIMARY KEY,
+	metodo_pago varchat(50),
+	fecha_c date,
+	id_carrito serial,
+	FOREIGN KEY (id_carrito) REFERENCES carrito_de_compra(id_carrito)
+);
+
+create table if not exists carta(
+	id_carta serial,
+	id_producto serial PRIMARY KEY,
+	FOREIGN KEY (id_producto) REFERENCES producto(id_producto),
+	rareza varchat(50),
+	año int,
+	estado varchar(50),
+	formato varchar(50)
+	id_carrito serial,
+	FOREIGN KEY (id_carrito) REFERENCES carrito_de_compra(id_carrito)
+);
+
+create table if not exists juego_de_mesa(
+	id_juego serial,
+	id_producto serial PRIMARY KEY,
+	FOREIGN KEY(id_producto) REFERENCES producto(id_producto),
+	Tipo_juego varchar(50)
+);
