@@ -44,7 +44,7 @@ create table if not exists boleta(
 	metodo_pago varchar(50),
 	fecha_c date,
 	id_carro serial,
-	FOREIGN KEY (id_carro) REFERENCES carro_de_compra(id_carro)
+	FOREIGN KEY (id_carro) REFERENCES carro_de_compras(id_carro)
 );
 
 create table if not exists carta(
@@ -56,7 +56,7 @@ create table if not exists carta(
 	estado varchar(50),
 	formato varchar(50),
 	id_carro serial,
-	FOREIGN KEY (id_carro) REFERENCES carro_de_compra(id_carro)
+	FOREIGN KEY (id_carro) REFERENCES carro_de_compras(id_carro)
 );
 
 create table if not exists juego_de_mesa(
