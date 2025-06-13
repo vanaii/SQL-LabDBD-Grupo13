@@ -62,8 +62,8 @@ create table if not exists carta(
 create table if not exists juego_de_mesa(
 	id_juego serial PRIMARY KEY,
 	id_producto serial PRIMARY KEY,
-	FOREIGN KEY(id_producto) REFERENCES producto(id_producto),
-	Tipo_juego varchar(50)
+	FOREIGN KEY (id_producto) REFERENCES producto(id_producto),
+	tipo_juego varchar(50)
 );
 
 create table if not exists producto(
