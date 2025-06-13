@@ -129,7 +129,7 @@ create table if not exists producto_x_carro_de_compras(
 );
 
 create table if not exists lista_deseos_x_carro_de_compras(
-	id_lista PRIMARY KEY,
+	id_lista serial PRIMARY KEY,
 	FOREIGN KEY (id_lista) REFERENCES lista_deseos(id_lista),
 	id_carro serial PRIMARY KEY,
 	FOREIGN KEY (id_carro) REFERENCES carro_de_compras(id_carro)
