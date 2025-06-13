@@ -120,3 +120,24 @@ create table if not exists lista_deseos_x_producto(
 	id_producto serial PRIMARY KEY,
 	FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
 );
+
+create table if not exists producto_x_carro_de_compras(
+	id_producto serial PRIMARY KEY,
+	FOREIGN KEY (id_producto) REFERENCES producto(id_producto),
+	id_carro serial PRIMARY KEY,
+	FOREIGN KEY (id_carro) REFERENCES carro_de_compras(id_carro)
+);
+
+create table if not exists lista_deseos_x_carro_de_compras(
+	id_lista PRIMARY KEY,
+	FOREIGN KEY (id_lista) REFERENCES lista_deseos(id_lista),
+	id_carro serial PRIMARY KEY,
+	FOREIGN KEY (id_carro) REFERENCES carro_de_compras(id_carro)
+);
+
+create table if not exists lista_deseos_x_ranking_carta(
+	id_lista serial PRIMARY KEY,
+	FOREIGN KEY (id_lista) REFERENCES lista_deseos(id_lista),
+	id_carta serial PRIMARY KEY,
+	FOREIGN KEY (id_carta) REFERENCES carta(id_carta)
+);
