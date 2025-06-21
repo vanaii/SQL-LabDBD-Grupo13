@@ -168,4 +168,73 @@ INSERT INTO valoracion (id_usuario, fecha_v, comentario, puntuacion, id_producto
 ('jefe4@invenpo.com', '2025-06-22', 'Vende muy bien en nuestra tienda.', 4, 20),
 ('admin@invenpo.com', '2025-06-25', 'Producto estrella de nuestro catálogo.', 5, 25);
 
+-- 11.RANKINGS
+INSERT INTO ranking (posicion_rank, posicion_mundial, id_producto) VALUES
+(1, 15, 5),
+(2, 30, 2),
+(3, 45, 11),
+(4, 50, 12),
+(5, 55, 13),
+(6, 60, 14),
+(7, 65, 15),
+(8, 70, 16),
+(9, 75, 17),
+(10, 80, 18),
+(11, 85, 19),
+(12, 90, 20);
 
+-- 12.USUARIO X PRODUCTO
+INSERT INTO usuario_x_producto (correo, id_producto) VALUES
+('cliente1@invenpo.com', 1),
+('cliente2@invenpo.com', 2),
+('cliente3@invenpo.com', 11),
+('cliente4@invenpo.com', 12),
+('cliente5@invenpo.com', 13),
+('jefe1@invenpo.com', 5),
+('jefe2@invenpo.com', 10),
+('jefe3@invenpo.com', 15),
+('jefe4@invenpo.com', 20),
+('admin@invenpo.com', 25),
+('cliente1@invenpo.com', 6),
+('cliente2@invenpo.com', 7),
+('cliente3@invenpo.com', 16),
+('cliente4@invenpo.com', 17),
+('cliente5@invenpo.com', 18),
+('jefe1@invenpo.com', 8),
+('jefe2@invenpo.com', 9),
+('jefe3@invenpo.com', 19),
+('jefe4@invenpo.com', 21),
+('admin@invenpo.com', 22),
+('cliente1@invenpo.com', 23),
+('cliente2@invenpo.com', 24),
+('cliente3@invenpo.com', 26),
+('cliente4@invenpo.com', 27),
+('cliente5@invenpo.com', 28),
+('jefe1@invenpo.com', 29),
+('jefe2@invenpo.com', 30),
+('jefe3@invenpo.com', 3),
+('jefe4@invenpo.com', 4),
+('admin@invenpo.com', 14);
+
+-- 13.LISTA DESEOS X PRODUCTO
+INSERT INTO lista_deseos_x_producto (id_lista, id_producto) VALUES
+-- Lista 1
+(1, 1), (1, 6), (1, 2), (1, 26), (1, 27),
+-- Lista 2
+(2, 2), (2, 4), (2, 28), (2, 29), (2, 8),
+-- Lista 3
+(3, 7), (3, 30), (3, 11), (3, 16),
+-- Lista 4
+(4, 8), (4, 3), (4, 12), (4, 13), (4, 22),
+-- Lista 5
+(5, 8), (5, 9), (5, 10), (5, 14), (5, 15),
+-- Lista 6
+(6, 11), (6, 12), (6, 13), (6, 16), (6, 21),
+-- Lista 7
+(7, 14), (7, 15), (7, 16), (7, 17),
+-- Lista 8
+(8, 17), (8, 19), (8, 25),
+-- Lista 9
+(9, 20), (9, 21), (9, 22), (9, 19),
+-- Lista 10
+(10, 23), (10, 24), (10, 25), (10, 20);
