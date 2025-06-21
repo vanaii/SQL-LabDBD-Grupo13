@@ -65,7 +65,8 @@ CREATE TABLE IF NOT EXISTS producto (
     stock INT,
     categoria VARCHAR(50),
     nombre_producto VARCHAR(50),
-    venta_producto INT
+    venta_producto INT,
+    precio_producto INT,
 );
 
 -- Tabla Carta
