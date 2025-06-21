@@ -238,3 +238,76 @@ INSERT INTO lista_deseos_x_producto (id_lista, id_producto) VALUES
 (9, 20), (9, 21), (9, 22), (9, 19),
 -- Lista 10
 (10, 23), (10, 24), (10, 25), (10, 20);
+
+-- 14.PRODUCTO X CARRO DE COMPRAS
+INSERT INTO producto_x_carro_de_compras (id_producto, id_carro) VALUES
+(1, 1),
+(2, 2),
+(11, 6),
+(12, 7),
+(13, 8),
+(14, 9),
+(15, 10),
+(16, 11),
+(17, 12),
+(18, 13),
+(19, 14),
+(20, 15),
+(21, 6),
+(22, 7),
+(23, 8),
+(24, 9),
+(25, 10),
+(26, 11),
+(27, 12),
+(28, 13),
+(29, 14),
+(30, 15);
+
+--15. LISTA DESEOS X CARRO DE COMPRAS
+INSERT INTO lista_deseos_x_carro_de_compras (id_lista, id_carro) VALUES
+(1, 1),
+(2, 2),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10),
+(1, 11),
+(2, 12),
+(3, 13),
+(4, 14),
+(5, 15),
+(6, 1),
+(7, 2),
+(8, 3);
+
+-- 16.LISTA DESEOS X RANKING CARTA
+INSERT INTO lista_deseos_x_ranking_carta (id_lista, id_carta) VALUES
+(1, 1),
+(2, 2),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10),
+(1, 11),
+(2, 12),
+(3, 13),
+(4, 14),
+(5, 15);
+
+-- 17. RANKINGS CARTA
+INSERT INTO ranking_carta (id_lista, id_carta, posicion_rank) VALUES
+(1, 1, 1),
+(2, 2, 2),
+(6, 6, 3),
+(7, 7, 4),
+(8, 8, 5),
+(9, 9, 6),
+(10, 10, 7),
+(1, 11, 8),
+(2, 12, 9),
+(3, 13, 10),
+(4, 14, 11),
+(5, 15, 12);
