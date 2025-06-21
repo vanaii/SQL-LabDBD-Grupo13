@@ -82,3 +82,90 @@ INSERT INTO permiso (correo, permiso_app, permiso_tienda) VALUES
 ('cliente3@invenpo.com', 'LECTURA', 'LECTURA'),
 ('cliente4@invenpo.com', 'LECTURA', 'LECTURA'),
 ('cliente5@invenpo.com', 'LECTURA', 'LECTURA');
+
+-- 6.CARROS DE COMPRAS
+INSERT INTO carro_de_compras (monto_total, cantidad, correo) VALUES
+(24, 2, 'cliente1@invenpo.com'),
+(35, 3, 'cliente2@invenpo.com'),
+(15, 1, 'cliente1@invenpo.com'),
+(60, 5, 'cliente2@invenpo.com'),
+(10, 1, 'cliente1@invenpo.com'),
+(90, 2, 'cliente3@invenpo.com'),
+(65, 3, 'cliente4@invenpo.com'),
+(120, 1, 'cliente5@invenpo.com'),
+(45, 2, 'cliente3@invenpo.com'),
+(80, 4, 'cliente4@invenpo.com'),
+(150, 3, 'cliente5@invenpo.com'),
+(30, 1, 'cliente3@invenpo.com'),
+(55, 2, 'cliente4@invenpo.com'),
+(200, 5, 'cliente5@invenpo.com'),
+(25, 1, 'cliente3@invenpo.com');
+
+-- 7.CARTAS
+INSERT INTO carta (id_producto, rareza, año, estado, formato, id_carro) VALUES
+(1, 'Ultra Rara', 1999, 'Nuevo', 'Holográfico', 1),
+(3, 'Legendaria', 1996, 'Excelente', 'Foil', 2),
+(5, 'Exclusiva', 2010, 'Perfecto', 'Full Art', 3),
+(7, 'Promocional', 2018, 'Excelente', 'Stamped', 4),
+(9, 'Oscura', 2012, 'Bueno', '3D', 5),
+(11, 'Secret Rare', 2020, 'Nuevo', 'Rainbow', NULL),
+(13, 'Ultra Rare', 2019, 'Excelente', 'Foil', NULL),
+(15, 'Ghost Rare', 2002, 'Bueno', 'Holográfico', NULL),
+(17, 'Hyper Rare', 2021, 'Nuevo', 'Rainbow', NULL),
+(19, 'Super Rare', 2008, 'Excelente', 'Foil', NULL),
+(21, 'Ultra Rare', 2022, 'Nuevo', 'Holográfico', NULL),
+(23, 'Secret Rare', 2005, 'Perfecto', 'Full Art', NULL),
+(25, 'Promo Rare', 2015, 'Bueno', 'Stamped', NULL),
+(27, 'Star Rare', 2003, 'Excelente', 'Holográfico', NULL),
+(29, 'Alt Art', 2023, 'Nuevo', 'Full Art', NULL);
+
+-- 8.JUEGOS DE MESA
+INSERT INTO juego_de_mesa (id_producto, tipo_juego) VALUES
+(2, 'Tablero'),
+(4, 'Guerra'),
+(6, 'Rol'),
+(8, 'Cooperativo'),
+(10, 'Familia'),
+(12, 'Estrategia'),
+(14, 'Cooperativo'),
+(16, 'Familiar'),
+(18, 'Colocación'),
+(20, 'Civilización'),
+(22, 'Abstracto'),
+(24, 'Económico'),
+(26, 'Estrategia'),
+(28, 'Ciencia Ficción'),
+(30, 'Rol');
+
+-- 9.BOLETAS
+INSERT INTO boleta (metodo_pago, estado_pago, monto_pago, impuestos, num_transaccion, fecha_c, id_carro) VALUES
+('Tarjeta', 'Aprobado', 24, 'IVA', '11111', '2025-01-03', 1),
+('Transferencia', 'Rechazado', 35, 'IVA', '22222', '2025-01-04', 2),
+('Efectivo', 'Aprobado', 15, 'IVA', '33333', '2025-01-06', 3),
+('Tarjeta', 'Rechazado', 60, 'IVA', '44444', '2025-01-09', 4),
+('Criptomoneda', 'Aprobado', 10, 'IVA', '55555', '2025-01-11', 5),
+('Tarjeta', 'Aprobado', 90, 'IVA', '66666', '2025-06-02', 6),
+('PayPal', 'Aprobado', 65, 'IVA', '77777', '2025-06-06', 7),
+('Transferencia', 'Pendiente', 120, 'IVA', '88888', '2025-06-11', 8),
+('Efectivo', 'Aprobado', 45, 'IVA', '99999', '2025-06-16', 9),
+('Tarjeta', 'Rechazado', 80, 'IVA', '10101', '2025-06-21', 10),
+('Criptomoneda', 'Aprobado', 150, 'IVA', '12121', '2025-06-22', 11),
+('Tarjeta', 'Aprobado', 30, 'IVA', '13131', '2025-06-23', 12),
+('PayPal', 'Pendiente', 55, 'IVA', '14141', '2025-06-24', 13),
+('Transferencia', 'Aprobado', 200, 'IVA', '15151', '2025-06-25', 14),
+('Efectivo', 'Aprobado', 25, 'IVA', '16161', '2025-06-26', 15);
+
+-- 10.VALORACIONES
+INSERT INTO valoracion (id_usuario, fecha_v, comentario, puntuacion, id_producto) VALUES
+('cliente1@invenpo.com', '2025-01-05', 'Impresionante carta vintage.', 5, 1),
+('cliente2@invenpo.com', '2025-01-07', 'Muy divertido para jugar en familia.', 4, 2),
+('cliente3@invenpo.com', '2025-06-03', 'La carta Charizard GX es espectacular.', 5, 11),
+('cliente4@invenpo.com', '2025-06-07', 'Catan es un clásico que nunca decepciona.', 5, 12),
+('cliente5@invenpo.com', '2025-06-12', 'Blastoise V tiene un diseño increíble.', 4, 13),
+('jefe1@invenpo.com', '2025-06-15', 'Excelente producto para nuestra tienda.', 5, 5),
+('jefe2@invenpo.com', '2025-06-18', 'Muy buen juego para recomendar.', 4, 10),
+('jefe3@invenpo.com', '2025-06-20', 'Calidad premium, clientes satisfechos.', 5, 15),
+('jefe4@invenpo.com', '2025-06-22', 'Vende muy bien en nuestra tienda.', 4, 20),
+('admin@invenpo.com', '2025-06-25', 'Producto estrella de nuestro catálogo.', 5, 25);
+
+
