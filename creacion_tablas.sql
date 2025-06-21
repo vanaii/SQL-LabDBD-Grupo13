@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS producto (
     categoria VARCHAR(50),
     nombre_producto VARCHAR(50),
     venta_producto INT,
-    precio_producto INT,
+    precio_producto INT
 );
 
 -- Tabla Carta
